@@ -1,0 +1,70 @@
+use university;
+
+db.students.insertMany([
+    { name: "Alice", age: 20, major: "Computer Science" },
+    { name: "Bob", age: 22, major: "Mathematics" },
+    { name: "Charlie", age: 21, major: "Physics" },
+    { name: "David", age: 23, major: "Chemistry" },
+    { name: "Eva", age: 20, major: "Biology" },
+    { name: "Frank", age: 22, major: "Electrical Engineering" },
+    { name: "Grace", age: 21, major: "Mechanical Engineering" },
+    { name: "Henry", age: 23, major: "Civil Engineering" },
+    { name: "Ivy", age: 20, major: "Psychology" },
+    { name: "Jack", age: 22, major: "Sociology" },
+    { name: "Kathy", age: 21, major: "English Literature" },
+    { name: "Leo", age: 23, major: "History" },
+    { name: "Mia", age: 20, major: "Art History" },
+    { name: "Nick", age: 22, major: "Music" },
+    { name: "Olivia", age: 21, major: "Film Studies" },
+    { name: "Peter", age: 23, major: "Philosophy" },
+    { name: "Quinn", age: 20, major: "Religious Studies" },
+    { name: "Ruby", age: 22, major: "Anthropology" },
+    { name: "Sam", age: 21, major: "Geography" },
+    { name: "Tina", age: 23, major: "Environmental Science" }
+]);
+
+db.courses.insertMany([
+    { title: "Intro to Programming", department: "CS", credit_hours: 4 },
+    { title: "Data Structures and Algorithms", department: "CS", credit_hours: 4 },
+    { title: "Operating Systems", department: "CS", credit_hours: 3 },
+    { title: "Database Management", department: "CS", credit_hours: 3 },
+    { title: "Linear Algebra", department: "Math", credit_hours: 3 },
+    { title: "Calculus I", department: "Math", credit_hours: 4 },
+    { title: "Calculus II", department: "Math", credit_hours: 4 },
+    { title: "Differential Equations", department: "Math", credit_hours: 3 },
+    { title: "General Chemistry I", department: "Chem", credit_hours: 4 },
+    { title: "General Chemistry II", department: "Chem", credit_hours: 4 },
+    { title: "Organic Chemistry", department: "Chem", credit_hours: 3 },
+    { title: "Biology I", department: "Bio", credit_hours: 3 },
+    { title: "Biology II", department: "Bio", credit_hours: 3 },
+    { title: "Cell Biology", department: "Bio", credit_hours: 4 },
+    { title: "Introduction to Electrical Engineering", department: "EE", credit_hours: 3 },
+    { title: "Circuit Theory", department: "EE", credit_hours: 4 },
+    { title: "Digital Electronics", department: "EE", credit_hours: 3 },
+    { title: "Introduction to Mechanical Engineering", department: "ME", credit_hours: 3 },
+    { title: "Thermodynamics", department: "ME", credit_hours: 4 },
+    { title: "Materials Science", department: "ME", credit_hours: 3 }
+]);
+
+db.enrollments.insertMany([
+    { student_id: ObjectId("64f85e5c2d5b221f59a94c00"), course_id: ObjectId("64f85e5c2d5b221f59a94c01"), grade: "A" },
+    { student_id: ObjectId("64f85e5c2d5b221f59a94c01"), course_id: ObjectId("64f85e5c2d5b221f59a94c02"), grade: "B" },
+    { student_id: ObjectId("64f85e5c2d5b221f59a94c02"), course_id: ObjectId("64f85e5c2d5b221f59a94c03"), grade: "A-" },
+    { student_id: ObjectId("64f85e5c2d5b221f59a94c03"), course_id: ObjectId("64f85e5c2d5b221f59a94c04"), grade: "B+" },
+    { student_id: ObjectId("64f85e5c2d5b221f59a94c04"), course_id: ObjectId("64f85e5c2d5b221f59a94c05"), grade: "A" },
+    { student_id: ObjectId("64f85e5c2d5b221f59a94c05"), course_id: ObjectId("64f85e5c2d5b221f59a94c06"), grade: "C" },
+    { student_id: ObjectId("64f85e5c2d5b221f59a94c06"), course_id: ObjectId("64f85e5c2d5b221f59a94c07"), grade: "A-" },
+    { student_id: ObjectId("64f85e5c2d5b221f59a94c07"), course_id: ObjectId("64f85e5c2d5b221f59a94c08"), grade: "B-" },
+    { student_id: ObjectId("64f85e5c2d5b221f59a94c08"), course_id: ObjectId("64f85e5c2d5b221f59a94c09"), grade: "B" },
+    { student_id: ObjectId("64f85e5c2d5b221f59a94c09"), course_id: ObjectId("64f85e5c2d5b221f59a94c0a"), grade: "A-" },
+    { student_id: ObjectId("64f85e5c2d5b221f59a94c0a"), course_id: ObjectId("64f85e5c2d5b221f59a94c0b"), grade: "B+" },
+    { student_id: ObjectId("64f85e5c2d5b221f59a94c0b"), course_id: ObjectId("64f85e5c2d5b221f59a94c0c"), grade: "C" },
+    { student_id: ObjectId("64f85e5c2d5b221f59a94c0c"), course_id: ObjectId("64f85e5c2d5b221f59a94c0d"), grade: "A-" },
+    { student_id: ObjectId("64f85e5c2d5b221f59a94c0d"), course_id: ObjectId("64f85e5c2d5b221f59a94c0e"), grade: "B-" },
+    { student_id: ObjectId("64f85e5c2d5b221f59a94c0e"), course_id: ObjectId("64f85e5c2d5b221f59a94c0f"), grade: "A" },
+    { student_id: ObjectId("64f85e5c2d5b221f59a94c0f"), course_id: ObjectId("64f85e5c2d5b221f59a94c10"), grade: "B" },
+    { student_id: ObjectId("64f85e5c2d5b221f59a94c10"), course_id: ObjectId("64f85e5c2d5b221f59a94c11"), grade: "A-" },
+    { student_id: ObjectId("64f85e5c2d5b221f59a94c11"), course_id: ObjectId("64f85e5c2d5b221f59a94c12"), grade: "B-" },
+    { student_id: ObjectId("64f85e5c2d5b221f59a94c12"), course_id: ObjectId("64f85e5c2d5b221f59a94c13"), grade: "A-" },
+    { student_id: ObjectId("64f85e5c2d5b221f59a94c13"), course_id: ObjectId("64f85e5c2d5b221f59a94c14"), grade: "B" }
+]);
